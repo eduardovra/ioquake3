@@ -328,6 +328,41 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 #endif
 
+//================================================================= PSL1GHT ===
+
+//#if defined(__linux__) || defined(__FreeBSD_kernel__)
+
+#include <machine/endian.h>
+
+//#if defined(__linux__)
+//#define OS_STRING "linux"
+//#else
+//#define OS_STRING "kFreeBSD"
+//#endif
+#define OS_STRING "GameOS"
+
+#ifdef __clang__
+#define ID_INLINE static inline
+#else
+#define ID_INLINE inline
+#endif
+
+#define PATH_SEP '/'
+
+#if defined __powerpc64__
+#define ARCH_STRING "ppc64"
+#endif
+
+#if __FLOAT_WORD_ORDER == __BIG_ENDIAN
+#define Q3_BIG_ENDIAN
+#else
+#define Q3_LITTLE_ENDIAN
+#endif
+
+#define DLL_EXT ".so"
+
+//#endif
+
 //===========================================================================
 
 //catch missing defines in above blocks
