@@ -1,0 +1,5 @@
+CC=$(PS3DEV)/ppu/bin/ppu-gcc
+CFLAGS=-I$(PS3DEV)/ppu/include
+ARCH=powerpc64
+PLATFORM=PSL1GHT
+V=1
